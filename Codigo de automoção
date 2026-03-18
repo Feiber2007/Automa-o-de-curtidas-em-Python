@@ -1,0 +1,46 @@
+import webbrowser
+import pyautogui
+from time import sleep
+
+webbrowser.open ('http://tiktok.com')
+sleep(5)
+pyautogui.click(2295,479, duration=2)
+sleep(5)
+pyautogui.click(2406,399, duration=2)
+sleep(5)
+pyautogui.click(2203,447, duration=2)
+sleep(5)
+pyautogui.write("SEU E@MAIL")
+sleep(5)
+pyautogui.click(2290,491, duration=2)
+sleep(5)
+pyautogui.write("SUA SENHA")
+sleep(5)
+pyautogui.click(2307,578, duration=2)
+sleep(10)
+webbrowser.open ('https://www.tiktok.com/@oreidosites')
+sleep(5)
+pyautogui.click(1916,568, duration=2)
+
+
+while True:
+    try:
+        imagem = pyautogui.locateOnScreen ('curtida.png')
+        sleep(5)
+
+        if imagem: 
+            sleep(5)
+            pyautogui.click(2760, 249, duration=2)
+            sleep(5)
+            pyautogui.press('down')
+        
+        else: 
+            raise pyautogui.ImageNotFoundException
+
+    except pyautogui.ImageNotFoundException:
+        sleep(5) 
+        pyautogui.click(2789, 285, duration=2)
+        sleep(5)
+        pyautogui.click(2760, 249, duration=2)
+        sleep(5)
+        pyautogui.press('down')
